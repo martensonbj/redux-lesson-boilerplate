@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import AddTodoFormContainer from '../containers/AddTodoFormContainer'
+import TodoListContainer from '../containers/TodoListContainer'
+import FilterMenu from '../components/FilterMenu'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <p>Hello World</p>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <section>
+      <h1>My Todo List</h1>
+      <AddTodoFormContainer />
+      <FilterMenu />
+      <TodoListContainer />
+    </section>
+  )
 }
 
-export default App;
+export default App
