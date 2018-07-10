@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { addTodo } from '../actions'
 import { connect } from 'react-redux'
 
-class AddTodoForm extends Component {
+export class AddTodoForm extends Component {
   constructor(props) {
     super(props)
     this.state = { text: '' }
@@ -38,11 +38,11 @@ class AddTodoForm extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   todos: state.todos
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   handleSubmit: (text, id) => dispatch(addTodo(text, id))
 })
 
