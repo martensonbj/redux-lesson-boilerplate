@@ -16,12 +16,8 @@ const Filter = ({filter, children, handleClick}) => {
   )
 }
 
-const mapStateToProps = (props, state) => ({
-  filter: state.filter
-})
-
 const mapDispatchToProps = (dispatch) => ({
   handleClick: (filter) => dispatch(setFilter(filter))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Filter)
+export default connect(null, mapDispatchToProps)(Filter)
